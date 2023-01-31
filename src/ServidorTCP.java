@@ -64,9 +64,11 @@ public class ServidorTCP {
                 linea=br.readLine();
             }
         }catch (FileNotFoundException ex){
+            salida="El fichero no se encontro";
             System.out.println("El fichero no se encontro");
         }catch (IOException ex){
             System.out.println("Error de entrada o salida");
+            salida="Error de entrada o salida";
         }
         return  salida;
     }
